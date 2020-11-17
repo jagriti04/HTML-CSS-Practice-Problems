@@ -1,0 +1,112 @@
+<!doctype html>
+<title>Website Layout Example</title>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: row;
+        margin: 0;
+    }
+
+    .col-1 {
+        background: rgb(198, 212, 114);
+        flex: 1;
+        text-align: center;
+    }
+
+    .col-2 {
+        display: flex;
+        flex-direction: column;
+        flex: 6;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .content>article {
+        flex: 3;
+        min-height: 60vh;
+    }
+
+    .content>aside {
+        background: hotpink;
+        flex: 1;
+    }
+
+    .headerContainer {
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+        background: tomato;
+        font-weight: bold;
+        padding: 10px;
+        height: 17%;
+    }
+
+    .footerContainer {
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+        background: lightgreen;
+        font-weight: bold;
+        padding: 10px;
+        height: 17%;
+    }
+
+    header,
+    footer,
+    article,
+    nav,
+    aside {
+        padding: 1em;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    article {
+        padding: 10px;
+        margin: 10px;
+        background: aqua;
+    }
+    .sideBarItem {
+        flex: 1 0 0;
+        border: 0px solid green;
+    }
+</style>
+
+<body>
+    <nav class="col-1 sideBarItem sideBarLeftItem"> <b>Nav</b></nav>
+    <div class="col-2">
+        <header class="headerContainer">Header</header>
+        <main class="content">
+            <article>
+                <h2>First article</h2>
+                <p>
+                    In a year that has largely been full of bad and tragic news because of COVID-19, there is finally
+                    some good news. Scientists have announced a breakthrough in the fight against the virus. The
+                    scientists are from the U.S. drug company Pfizer and the German pharmaceutical company BioNTech.
+                    Their researchers say they have developed a vaccine that has a 90 per cent success rate in
+                    protecting against COVID-19.
+                </p>
+            </article>
+            <article>
+                <h2>Second article </h2>
+                <p>
+                    Health experts say it will be months before the vaccine is widely available for people to take. It
+                    needs to be stored at temperatures of -80º Celsius. However, Pfizer CEO Dr. Albert Bourla was upbeat
+                    about his company's achievement. He said: "Today is a great day for science and humanity....We are
+                    reaching this critical milestone in our vaccine development program at a time when the world needs
+                    it most."
+                </p>
+            </article>
+            <aside class="sideBarItem sideBarRightItem">Aside</aside>
+        </main>
+        <footer class="footerContainer">Footer</footer>
+    </div>
+</body>
