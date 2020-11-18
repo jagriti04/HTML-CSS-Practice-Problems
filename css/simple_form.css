@@ -54,3 +54,13 @@ error-output {
     font-style: italic;
     color: red;
 }
+
+@media screen and (max-width: 600px) {
+    body {
+        width: 100%;
+        max-width: 400px;
+    }
+    .headerContainer{
+        background: green;
+    }
+  }
